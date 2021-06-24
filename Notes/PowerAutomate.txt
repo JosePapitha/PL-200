@@ -1,0 +1,26 @@
+Power Automate :
+---------------------------------------------------------
+	1. Previously known as Microsoft Flow 
+	2. It is a part of Power platform 
+	3. Online workflow and integration service to automate tasks 
+	4. Can be used for sending data from one application to other 
+Templates :
+	Predefined flows that can connect different applications 
+Connectors :
+	Applications that can connect with flow 
+	MIcrosoft and non microsoft connectors are also available -> google, twitter, github, slack 
+---------------------------------------------------------	
+Dynamics 365 connector :
+	Every flow has one trigger 
+	And many actions (steps)
+	
+3 ways to make a flow :
+	1. start from blank
+		  - Automated flow : trigger 
+		  - Instant flow : On demand 
+		  - Scheduled flow : Runs at a scheduled interval 
+		  - UI flow : uses RPA 
+		  - Business flow : can be created from classic solution in dynamics 
+	2. Start from a template 
+		
+	

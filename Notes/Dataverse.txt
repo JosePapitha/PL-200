@@ -1,0 +1,211 @@
+Common Data Service :
+	Can create objects from UI 
+	No need to write queries
+
+All components of CDS are in Default solution
+
+Common data model - Schema of CDS
+	Core
+
+	Dynamics 365 -
+		Sales
+		Marketing
+		finance
+		Supply chain
+		service
+		commerce
+Other applications can also access CDS through Data Connectors
+
+Entity -> Table
+Attribute -> Column
+Record -> Row
+
+Common Data service Solution:
+	Group of configuration/customizations of CDS components
+	
+Solution is physical file of customized components exported and imported to other instances
+
+It contains :
+	Entities
+	Forms,views,attributes,relationships
+	security roles
+	charts,dashboard, reports
+	settings - language,date,time
+	Source code - plugins,javascript,html,custom workflows
+	
+Types -
+	1. Default
+	2. Managed
+	3. Unmanaged
+	
+To look for CDS - make.powerapps.com
+
+Entity can be accessed by below navigation
+Solutions -> Default solution -> Account Entity	
+
+Entity has:
+	Fields
+		Name -> logical name/backend name
+	Relationships
+	Business rules
+	views
+	forms
+	Dashboards
+	charts
+	keys
+	data
+------------------------------------------------------------------------------------------
+Creating Publisher and Solution:
+		
+	Publisher :
+		Profile of the company who owns the solution - case study (NorthWind)
+		Each solution needs solution publisher
+		Provides - 
+			Common customization prefix
+			option value prefix
+			
+navigate to make.powerapps.com
+solution -> new solution -> publisher
+	Publisher form will have prefixes 
+Package Type -> by default (unmanaged) Dev environment
+	we can export as managed/unmanaged 
+Solutions -> Add existing - its from Default solution of CDS
+
+--------------------------------------------------------------------------------------------
+
+App Designer -> to build Model driven applications
+ 
+	Model driven apps -
+		Default UI by microsoft
+		can be distributed as solution
+		
+App - layout of entities 
+
+ 1. creating sitemap
+ 2. validate and publish
+ 
+go to make.powerapps.com -> click apps
+
+App Types : 
+	Portal - portal provides an interface for the customers to access CDS
+	
+Creating app steps
+	1. Click new app
+	2. use existing solution -> expense management system
+	click site map
+	3. create area
+	4. create group
+	5. create subarea
+Dont forget to publish
+
+--------------------------------------------------------------------------------------------
+Customizing entity :
+	Existing 
+	new
+Datatypes -
+	single line, multiple line, whole number, currency, auto number, optionlist (picklist) both entity level and global level example country list
+	two options -> radio button, lookup -> foreign keys, image, file
+creating custome entity -
+	1. go to make.powerapps.com
+	2. go to solution
+Solution -> expense management system -> new -> entity
+
+give -
+	Display name
+	Name
+	primary field
+	Click Enable attachments
+	Click create
+Primary field is not samme as Primary key
+
+ctrl +f5 to refresh EM browser link
+
+Important Steps -
+	1. Created custom entity
+	2. Published the custom entity
+	3. Added it inside the sitemap in app designer 
+	4. refreshed in UI
+	
+Creating attributes:
+	switch to classic UI
+	Click fields
+	Status Reason
+		Active - Draft, submitted, Approved, Rejected
+		Inactive - cancelled
+		
+----------------------------------------------------------------------------------------------------
+
+Form Structure
+	Tabs -> sections -> Fields
+	
+make.powerapps.com
+solutions -> expense management -> expense request -> forms
+ To create new tab 
+	click add component
+
+	Create entity 
+	Save and publish
+	Go to apps -> select expense app -> edit site map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		

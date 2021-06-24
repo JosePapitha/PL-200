@@ -1,0 +1,97 @@
+Relationships :
+	Relating records of entities to each other in same database
+	
+Types -
+	1:N
+	N:1
+	N:N
+	
+1: N
+	Account -> Contact
+(Account is       (Contact is number of employee
+company detail)	      details associated with the company)
+
+Lookup attribute :
+	Primary key of account is stored in Contact table as foreign key
+	
+Account Table -
+	1. Name
+	2. accountid
+Contact Table -
+	1. firstname
+	2. parentaccount (LK or Fk)
+------------------------------------------------------------------------
+Creating Relationship record
+Two of creating relationship record:
+	1. Creating Lookup attribute inside Expense item entity
+	
+		always from Primary	to related entity -> 1:N
+		  i.e., Expense request -> Expense Item
+		  
+		Go to relationships tab
+			add relationship -> one to many
+	2. Adding subgrid to the forms 
+	
+		Go to Forms
+		adding subgrid to expense request
+		add component
+		
+		forms in expense item 
+		add expense request field
+		
+	Publish and in app add expense item in trip 1
+	
+--------------------------------------------------------------------
+Relationship behaviour :
+
+	Request record deleted -> what happens to related request item ?
+	
+	Types:
+		Referential (default) - no cascading
+		parental  - cascading
+		custom
+	Delete function - Restrict 
+---------------------------------------------------------------------
+Mappings 
+ can be achieved via classic UI
+	Inside relationship -> mappings 
+	create new mapping 
+		primary entity -> related entity
+		Mapping can be done only in 1:N and N:1 
+---------------------------------------------------------------------
+Connection Roles:
+	without relationship -> connecting entity
+	connections supplement relationships
+	
+	Relationship drawbacks:
+		Account -> contact
+			relationship cannot say which contact is associated with account 
+				eg., former employee, customer , supplier
+				i.e., roles are not clearly known
+	Insurance Policy
+	p
+	contacts - A,B,C,D
+	
+	connection roles says A is child of B
+						  B is parent of A
+						  C is primary policy contact
+						  D is nominee
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

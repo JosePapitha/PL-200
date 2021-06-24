@@ -1,0 +1,37 @@
+What is view ?
+	List of records in a table
+	Under column headings - has grid with records 
+How many columns to display
+width of each column
+sort options
+default filters - like query to the table
+
+Types -
+	Personal - business users can customize - accessed by end users. Hence it is not a part of solution ( cannot be moved to other environment ). It can also be shared to anyone.
+		Open Advanced filter panel option to customize personal view.
+	System  - can be configured within the solution , can be accessed or edited by system admin or customizer.
+		It is a part of CD solution which can be moved from one environment to other environment.
+		public - displayed in the main grid
+		Non-public
+---------------------------------------------------------------------
+Northwind case study -
+	1. customize active expense request view 
+	2. customize active expense item view
+	
+create new system view (created withing solution)
+	1. Approved expense request
+	2. Unapproved expense request
+	3. Travel expense items
+	4. Taxi expense items
+---------------------------------------------------------------------
+Non public views:
+	1. Advanced find - replaced by advanced filtering panel 
+	2. Associated - List of related records ( in expense request we can see expense item associated view )
+	3. Lookup - In expense item we have a lookup of expense request
+	4. Quick find - In environment url 
+			Every entity has a filter in top right which is called quick find 
+			with quick find active view we can configure "Find columns"
+Personal view case study task - Customized in environment url.
+	1. Find all expense requests containing taxi expense items.
+	
+	

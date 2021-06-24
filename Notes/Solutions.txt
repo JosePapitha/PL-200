@@ -1,0 +1,70 @@
+
+
+What is solution?
+	Group of configurations 
+	Customizations of CDS Components 
+----------------------------------------------------------------------------------------------------	
+Publisher :
+	Company/Organization that publishes the solution 
+
+More options : (Advanced)
+	Default custom solution has Package Type -Unmanaged 
+----------------------------------------------------------------------------------------------------	
+	
+Solution can be exported and imported from one environment to another which moves components 
+	Developement Instance -> Production Instance
+	
+What Solution Contains ?
+	1. Entities 
+	2. Views , Forms , Attributes, Relationships 
+	3. Charts, Dashboards, Reports 
+	4. Security Roles
+	5. Settings 
+----------------------------------------------------------------------------------------------------	
+Types of Solution:
+
+1. Default Solution :
+		1. Contains all components of CDS 
+		2. Not to edit and work directly, hence we have to create custom solution and work 
+		3. Default solution wont be exported as it bulky and difficult to track customized components
+2. Unmanaged Solution :
+		1. Default custom solution is unmanaged 
+		2. A Solution that is still under development 
+		3. After importing to target environment, we can still edit -> No restrictions 
+		
+	Scenarios where unmanaged solution can be used :
+		1. Developement instance 1 -> development instance 2  -> where 2 developers merge their configurations and work 
+		2. Developement instance -> Testing instance
+3. Managed Solution :
+		1. Represents completed solution
+		2. Easy to Rollback 
+	
+	Managed Properties :
+		1. Option to diable further customizations once imported to target environment
+	Scenarios where managed solution can be used :
+		1. Developement instance -> Testing/UAT instance  
+		2. Developement instance -> Production instance
+		3. Developement instance -> Market place (Microsoft App source) -> coz they accept only managed solution here 
+-------------------------------------------------------------------------------------------------------
+Before exporting Solution things to do:
+		1. Add Expense App in solution ( Expense management system )
+		2. Add Expense sitemap 
+		3. If business process flow present, add entity of same name 
+---------------------------------------------------------------------------------------------------------
+
+1. We can create any number of unmanaged solution  ---> we cannot create managed solution directly 
+2. An entity (or component ) can be present in more than one solution
+3. When you create a new entity in a custom solution, it will get added to the default solution also.
+
+---------------------------------------------------------------------------------------------------------
+when you delete unmanaged solution :
+		Only solution gets deleted. The solution components are still available in the default solution.
+		
+when you delete managed solution :
+		The solution components are also deleted from everywhere.
+		
+---------------------------------------------------------------------------------------------------------
+solution patch / fixing bugs :
+	changes must follow the release cycle -> create in dev and then move to prod 
+
+	

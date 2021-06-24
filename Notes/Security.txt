@@ -1,0 +1,207 @@
+Security Model 
+--------------------------
+1. Security Roles - sales /marketing and restrict data according to the roles 
+		e.g., user can add and view the record, manager can delete the record 
+2. Users can share data without giving ownership 
+
+user management is done at -> Microsoft 365 level with help of Azure Active directory (AAD)
+  In AAD -> authentication happens 
+	Logging into CRM, credentials will be validated against AAD (add/remove users, forget passwords)
+  
+Adding users - User Management . Billing and purchases 
+This is will be done by company infrastructure teams 
+	admin.microsoft.com
+	adding users to dynamics 365/ Power apps
+	
+Steps to create new users :
+-------------------------------------------------------------------------
+1. admin.microsoft.com -> users -> add users -> pick license 
+2. Make sure users are added in correct business unit in the application 
+3. provide security roles 
+4. provide app access make.powerapps.com  - select Expense app -> share and add the user and share it.
+
+-------------------------------------------------------------------------	
+common data service roles:
+	UI -> users -> select users -> settings -> advanced settings -> Security -> users 
+	Check users in enabled users 
+	or 
+	admin.powerplatform.com -> environment -> settings -> users 
+-------------------------------------------------------------------------
+Ownership :
+	user can change the ownership by using assign button 
+	Select the users from enabled users -> Manage roles ( roles for power apps ) -> assign some roles 
+	
+	For custom entities -> we have an option to not to give the owner 
+		new entity -> advanced settings -> entity type and ownership 
+			1. user or team -> owner field is automatically added 
+			2. Organization -> no owner 
+					e.g., metadata like -> office location 
+						  Error codes 
+----------------------------------------------
+What are business units?
+	Departments or companies.
+	Created based on functions or geography
+	new users must be assigned to business units before creating security roles.
+	
+Root BU  (organization)-> Child BU -> Child BU
+
+BU created based on geography -> US or CA 
+
+Steps to create BU:
+	Power platform admin center -> Environment -> dynamicscrm -> settings -> Business unit 
+	
+	Select organization (Root BU) -> left (business unit) -> new business unit 
+	
+To add the BU to user :
+	select user -> update BU 
+---------------------------------------------------
+Security Roles :
+1. contains set of permissions - create,update,read and delete 
+2. users assigned to security roles get all permissions assigned to that roles
+	e.g., sales manager role 
+3. There are many existing roles in CDS , we can modify or create new ones 
+4. Each users can have multiple security roles
+
+
+Privileges :
+1. Record level	-
+	create, update, assign, delete, share 
+2. Task level -
+	print, email, add security roles 
+
+Power platform admin center -> Environment -> dynamicscrm -> settings -> Security Roles 
+
+Copy existing roles to create new one 
+--------------
+	Inside edit option within core records -> CDS core components are found
+record level privileges -> For an entity 
+Allows user to - 
+		create - add
+		read - view 
+		write - edit 
+		delete - remove 
+		append - associate entities with a parent record 
+		appendto - associate entities with the record 
+		assign - giving ownership
+		share - giving access 
+Miscellaneous privileges -> task level 
+------------------------------------
+Level of acces :
+	1. User 
+	2. BU
+	3. Parent child
+	4. Organization
+------------------------------------------------------------------------	
+Demo of Security Role:
+
+Root - owner - jose - account record (google)
+child - US - owner - helen george - account record (Microsoft)
+		     user A
+		CA - user B 
+Go to application -> settings -> users -> Helen george , check whether the BU is US 
+Then , make.powerapps.com -> Apps -> Select Expense App -> click share and choose helen george -> CDS as Northwinfd sales manager 
+
+change below and view with different logins --
+Create - BU 
+Read - None , BU, Org 
+	
+-------------------------
+Northwind case study :
+
+Security :
+
+Employees -
+	1. Can create expense request and items 
+	2. Cannot change the status 
+	3. cannot edit the expense request once submitted 
+	4. Cannot delete any records 
+	5. Can see their own records   ---> user access 
+
+Managers -
+	1. Can edit expense request and items 
+	2. Can see all the records ---> organization access 
+	3. Cannot delete records 
+-----------------------------------------------------------------
+Sharing features :
+	1. users can share their privileges with others 
+	2. can be shared to different BU users too
+Assign - change of ownership 
+sharing - Sharing of privileges. No owner change.
+
+select account with admin user and share the access.
+----------------------------------------------------------
+Team :
+	collection of users with same or different business unit
+	one user can belong to multiple teams 
+Types of Team :
+	1. Owner team 
+	2. Azure active directory ( AD ) group team 
+	3. Access team
+	-------------------------------------------------------
+
+Access teams :
+1. Simplifies the sharing feature 
+2. Defining permissions to share with a particular entity 
+3. by adding subgrid of users in the entity 
+
+Steps to create -
+ 1. enable the entity for access team 
+	solutions -> entity -> settings -> more settings -> colloboration -> auto create access teams 
+	
+Account entity -> Security tab in form design 
+	Read only access 
+	Read write access 
+Steps to remember while adding subgrid for access template :
+	1. Records - all record types 
+	2. Entity - users 
+	3. Default view - associated record team members 
+	4. read write access / read only access ---> access template created 
+---------------------------------------------------------------------
+Field level security :
+	credit card info 
+	ssn 
+specific field level restrictions 
+
+Field security profile :
+	It is used to give access to fields that have been enabled for field level security to users other than default admin 
+
+Solutions -> entity -> columns -> select a column -> advanced options -> enable column security 
+	a icon will be inserted in the field -> save table 
+---------------------
+To enable field security profile :
+	solutions -> expense management system -> new -> other -> column security profile 
+-----------------
+Hierarchy security :
+	Advanced level of security 
+	used in complex security requirements 
+	brings maintainence cost down - coz works dynamically 
+types :
+	1. Manager hierarchy - lookups in main forms 
+	must be within same BU 
+					CEO
+	 VP of sales     		 VP of service 
+	sales Managers 				service managers 
+	 sales people 				  service people 
+steps to enable manager hierarchy :
+	environment -> settings -> users -> hierarchy security -> Enable manager hierarchy
+Immediate subordinates -> all the privileges except delete 
+Non- immediate subordinates -> Only read access 
+	2. Position hierarchy -> groups 
+First enable hierarchy security 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+

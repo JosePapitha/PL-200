@@ -1,0 +1,28 @@
+
+What is Tenant ?
+	Also know as organization
+	All applications in microsoft uses Azure AD (Active Directory) - where authentication is managed
+	Called as Azure AD Tenant/Organization
+
+What is instance ?
+	Also know as Environment
+	
+Power Platform Admin center : https://admin.powerplatform.com
+	Manage CDS instances
+	Review status of Apps 
+	Apply updates
+	Taking backup and restores
+	Early access
+	
+What is early access?
+	Product update by Microsoft
+		every year 2 updates - General availability
+			1. Wave 1 - april
+			2. Wave 2 - Oct
+	Early access couple of months before
+	Early access is not available for instances
+	
+Early access is available in Power Platform Admin center
+	Environment -> Dynamicslab -> Updates -> manage -> turn on
+	
+	

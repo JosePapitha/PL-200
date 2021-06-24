@@ -1,0 +1,91 @@
+Importing data to CDS:
+------------------------------------
+Build tool - import data wizard 
+	Spreadsheets, databases -> can be easily imported 
+	Cannot be run by scheduled jobs 
+	User have to import data 
+	Supported files - .csv, .txt, .xml, zip, .xlsx 
+	
+	Max allowed files :
+		zip - 32 MB
+		csv,text,xml,spreadsheet - 8 MB 
+		
+Data wizard can be accessed by app -> settings -> data management 
+------------------------------------------------
+Advanced import - importing data that contains 
+	1. optionsets - drop downs 
+	2. lookups - reference to another field (GUID)
+		Source data could be different from the system 
+----------------------------------------------
+
+Duplicate Detection - to maintain the integrity of data 
+					  custom rules can be defined based on business requirements 
+
+3 ways to enable duplicate detection:
+	1. When a record is created or updated 
+	2. When microsoft dynamics 365 for outlook goes from offline to online 
+	3. During data import 
+
+settings -> data management -> duplicate detection settings
+------------------------------------------------
+Auditing :
+	Helps to track changes of data 
+	maintain the log of changes 
+We can track :
+	1. Who changed the record 
+	2. Timestamp 
+	3. Old data 
+	4. New data 
+Auditing is not enabled by default -> coz it consume space 
+---------------------------------------------------
+Enable Auditing :
+	1. Enable Organization or instance level 
+	2. Enable entity level	
+			it enables attributes of entity 
+-----------------------------------------------------------
+Organization or instance level auditing settings :  app -> settings -> Audit and logs -> Audit settings 
+	1. Start Auditing
+	2. Audit user access -> log access 
+
+The above two logs are stored in CDS 	
+
+	3. start read auditing -> Read logs 
+ This is stored in Office 365 -> Security and compliance center 
+---------------------------------------------------------------- 
+Entity level auditing settings : app -> settings -> Audit and logs -> Entity and field audit settings  
+	
+To test audit :
+	change some data in account -> related -> audit history tab 
+	If the entire entity is deleted we can view audit by -> app -> settings -> audit summary view 
+To see read logs :
+	admin.microsoft.com -> compliance -> Audit 
+----------------------------------------------------------------
+Available templates in Dynamics 365 :
+	Email Template 
+
+	Excel and Word Template - Document templates are used to print documents which have both static and dynamic data from CDS 
+			e.g., Employee appointment letter, Customer onboard letter , Promos and coupons.
+	Article 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

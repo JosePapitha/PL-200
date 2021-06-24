@@ -1,0 +1,131 @@
+What are processes?
+
+
+Types of processes:
+	1. Action
+	2. Business Process flow 
+	3. Workflows - widely used in projects 
+	4. Power Automate (Flow)
+	
+These are classsic processes within CDS 
+
+Workflow processes:
+	series of steps and rules that help to automate a business process without user interface.
+	works in background.
+	usually triggered as a event.
+	Each workflow process is associated with single entity (trigger) 
+		e.g., Sending email when a contact record is created  by the user 
+			Trigger Entity- Contact
+			Event - Create of contact 
+Workflows can be intiated in 2 ways :
+1. Manual
+2. Automatic 
+
+Points to consider while creating workflows :
+	1. when to start 
+	2. should run as realtime or background workflow.
+	3. what actions to perform
+	4. what conditions should actions be performed.
+Steps to create workflow process:
+	1. switch to classic 
+	2. components -> processes 
+	3. Category as workflow and select the right entity 
+
+		Background workflows (Asynchronous)  -> default 
+		Realtime workflows (Synchronous)
+Background workflow is taken by a different process, because of it we have to reload the page to check the task assigned.
+Realtime workflow gives immediate task assigned results 
+
+Run as on demand process :
+	open account -> settings -> flow -> run workflow 
+	If On demand workflow is checked then we can trigger workflow manually using above navigation 
+		
+Troubleshooting workflow logs :
+	App -> Settings -> Advanced Settings -> System jobs 
+------------------------------------------------------------------------------
+Generating Email to manger when the record is created :
+
+Workflow steps :
+	1. in send email task select the to option dynamically 
+		entity as -> owning user -> which the owner of the current record 
+					and accessing attribute as manager 
+
+we can also send emails via 					
+Microsoft flow or Microsoft Power automate 		
+------------------------------------------------------------------------------
+Auto populate workflow :
+
+		Example - A workflow that populates Approval date automatically when the record is approved by the manager.
+		Set approval date to the timestamp of the current date and time of record approval.
+		access timestamp from "Modified on" attribute of the expense request record. 
+------------------------------------------------------------------------------
+Wait condition - 
+	Stopping the execution until the condition is satisfied :
+		statement 1;
+		wait(condition)
+		{ statement 2;
+		}
+		statement 3;
+wait condition scenario :
+	
+		Trigger on account create 
+			1. create task 1
+			2. wait until task 1 is completed 
+			3. then create task 2 
+-------------------------------------------------------------------------------------
+Time out condition :
+Time out is a variation of wait condition 
+		statement 1;
+		Timeout(duration)
+		{ statement 2;
+		}
+		statement 3;
+usage :
+	1. To send reminder emails 
+	2. To escalate to managers 
+Assume that expense request has to be approved/rejected within 5 days 
+Send a reminder email to manager after 4 days.
+
+the above scenarios can be achieved by editing the existing workflow -> send rmail to manager after submission 
+	add step as wait -> select condition as process -> timeout -> equals -> 4 days condition 
+-------------------------------------------------------------------------------------		
+Business Process Flow : BPF 
+BPF is useful when we have 100 of attributes and customer dont know what to do.. just to remind them what they have to do in each stage 
+	Contains series of stages
+	each stage has steps 
+1. Qualify
+2. Develop 
+3. Propose 
+4. close 
+
+For example : Expense Request Entity 
+	1. Data Capture 
+	2. Review 
+	3. Approval 
+Workflow and action step in BPF -> we can trigger on demand workflows and actions in BPF 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

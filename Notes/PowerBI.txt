@@ -1,0 +1,18 @@
+Power BI 
+------------------------
+Reporting and intelligence platform :
+	Business Analytics service from microsoft 
+	Tools for charts, dashboards 
+
+-------------------------------
+Buying Power BI license :
+	admin.microsoft.com -> billing -> purchase servies 
+----------------------------------
+Rest API - Power BI
+
+https://orgfb048e76.api.crm.dynamics.com/api/data/v9.2/
+ path to find the above url :
+app settings -> settings -> customizations -> resources 
+------------------------------------------------------------
+Integrating Power BI report in dynamics 365 :
+app settings -> settings -> adminitrations -> system settings -> reporting tab -> select yes -> ok 

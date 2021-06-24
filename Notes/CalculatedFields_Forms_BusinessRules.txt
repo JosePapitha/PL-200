@@ -1,0 +1,46 @@
+What are field types?
+
+	Standard(default)
+	Calculated field -
+		automating manual calculations
+			1. Full name: First name + last name
+			2. due date : created date + 5 days
+	Roll up field  - Aggregate value calculations
+		sum,min,max,count
+			1. Number of expense item within expense request
+			2. Total amount of all expense items related to an expense request.
+	System settings to change the recurring job 
+	Settings to update the currency value in personalization view
+----------------------------
+What are forms ?
+	A table can have more than one form.
+	By Default - Custom table comes with one main form 
+	
+	Types of Forms :
+		1. Main - main user interface for table 
+Where the other types of forms are used ?
+		2. Quick Create - creating new records quickly 
+		3. Quick View 
+		4. Card Form 
+Definitions of each forms and where it is used .
+----------------------------
+Business Rules -
+	To apply form logic - UI validations , conditionally enable/disable controls , hide/show controls, show error messages 
+	No javascript code or plugins needed
+	
+	set lock/unlock  -> enable/disable field
+	set visibility -> hiding/showing attributes
+	set default value -> assign value to any attribute if the value is not present 
+	set field value -> overwrite any existing value 
+	show error message -> any message to user 
+	
+-------------------------------
+
+Scope of business rules -
+	1. Form Scope - All forms or single form 
+			Runs on client side ( as javascript ) 
+			Applies to selected forms 
+	2. Entity Scope -
+			Runs on both client side and server side 
+			Runs when you import the data
+			Runs on editable grids 

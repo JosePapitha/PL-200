@@ -1,0 +1,25 @@
+
+
+Searching data - 
+	Types of search in CDS :
+		1. Quick find
+		2. Advanced search 
+		
+	Above 2 options already discussed in app -> filter symbol - top in tab is advanced search and search with this view is quick find option 
+	
+		3. Multi-Entity Quick find / categorized search  -  search symbol in app label
+				Multi entity search is enabled from -> advanced settings  -> settings -> admintration -> system settings  -> set categorized search -> select  
+		
+		4. Relevance search 
+				It uses external search service (External indexing) - powered by Azure to boost the performance
+				Azure Cognitive search (Azure search service) - available as stand alone service / also avialable as API 
+				
+				Microsoft natural language stack - which is used by bing 
+				
+				Relevance search is enabled from -> app -> settings -> features -> Relevance search -> on   --------------------------> This is not working 
+																																Switched back to classic to work 
+				
+				It matches inflectional words -> find -> finding, found 
+				Ignores articles like an, a, the 
+				Attachments are also searched. 
+				Doesnt support numeric or date data type 

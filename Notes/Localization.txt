@@ -1,0 +1,26 @@
+Language and currencies :
+	Supports many markets 
+	Multiple language and currencies 
+
+While creating instance, Admin selects -> 1. Base Currency
+										  2. Base Language
+										  
+For various languages :
+	Admin can install language pack for additional languages
+		It contains labels 
+App -> settings -> languages -> select language -> enable 
+
+App -> settings -> personalized settings -> select language -> apply 
+
+custom entities will not be automatically translated. we have to translate manually.
+
+--------------------------------------------------------------------------------------------
+
+Field Translations :
+	
+	App -> settings -> Data Management -> Export Field Translations   This is for application level label translations 
+	
+For entity level :
+	Switch to classic 
+	
+	Entities -> Translations -> Export translations 
