@@ -1,4 +1,4 @@
-# PL-200
+# PL-200 <a href='https://josepapitha.github.io/PL-200/'><img src='pl-200.jpg' align="right" height="139" /></a>
 
 What is dynamics CRM?
 	Microsoft Dynamics CRM is a customer relationship management software package developed by Microsoft
