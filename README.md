@@ -48,3 +48,12 @@ Deals with Customer, customer data
 Used by sales, customer service and marketing.
 
 CRM Modules - Sales, customer service, Field service, Marketing
+
+
+
+Useful Links to crack PL-200
+------------
+Microsoft Learn - https://docs.microsoft.com/en-us/learn/certifications/exams/pl-200
+
+Whizlabs Practise sets - https://www.whizlabs.com/microsoft-power-functional-consultant-pl-200-certification/
+
